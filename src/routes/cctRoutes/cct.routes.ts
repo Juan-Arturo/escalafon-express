@@ -14,9 +14,9 @@ router.get("/access", (req, res) => {
 });
 
 // Ruta para obtener todos los centros de trabajo
-router.get("/getAllCTT", getAllCentrosTrabajo);
+router.get("/getAllCTT", validateJwt, getAllCentrosTrabajo);
 
 // Ruta para crear un nuevo centro de trabajo
-router.post("/createCCT", createCentroTrabajo);
+router.post("/cctCreateUpdate", createCentroTrabajo);
 
 export default router;

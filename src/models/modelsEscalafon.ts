@@ -1,5 +1,6 @@
 import { getConexiones } from "../../conexions/conexions";
-import { initModels } from "./modelsEscalafon/init-models";
+import { initModels } from "./modelEscalafon/init-models";
+
 
 export const getModels = async (bd: string) => {
   // Obtener la conexión para la base de datos 'nombre de la bd'
@@ -9,7 +10,7 @@ export const getModels = async (bd: string) => {
   if (conexion) {
     const models = initModels(conexion); // Pasar la conexión a initModels
    console.log("Modelos inicializados:", models);
-    return models;
+   return models;
   } else {
     console.log('No se pudo obtener la conexión para "escalafon".');
     return null;
