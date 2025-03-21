@@ -3,6 +3,6 @@ dist/
 temp/
 **/**/*.log
 config.js
-.evn
-.evn.production
+.env
+.env.production
 .env.test
